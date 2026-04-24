@@ -15339,7 +15339,7 @@
 	<item component="ComponentInfo{jp.bookwalker.kreader.android.epub/jp.bookwalker.kreader.android.epub.startup.SplashActivity}" drawable="book_walker" />
 	<item component="ComponentInfo{jp.buyee/jp.buyee.MainActivity}" drawable="buyee" />
 	<item component="ComponentInfo{jp.co.a_tm.android.launcher/jp.co.a_tm.android.launcher.Launcher}" drawable="wallpaper_theme_plus_home_launcher" />
-	<item component="ComponentInfo{jp.co.aeon.credit.android.wallet/jp.co.aeon.credit.android.wallet.MainActivity}" drawable="aeon_wallet" />
+	<item component="ComponentInfo{jp.co.aeon.credit.android.wallet/jp.co.aeon.credit.android.wallet.MainActivity}" drawable="aeon_pay" />
 	<item component="ComponentInfo{jp.co.aeonst.app.myaeon/jp.co.aeonst.app.myaeon.MainActivity}" drawable="iaeon" />
 	<item component="ComponentInfo{jp.co.airfront.android.a2chMate/jp.syoboi.a2chMate.activity.HomeActivity}" drawable="chmate" />
 	<item component="ComponentInfo{jp.co.akindo_sushiro.sushiroapp/jp.co.sushiro.activity.MainActivity}" drawable="sushiro" />

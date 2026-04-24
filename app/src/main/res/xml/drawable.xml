@@ -5,6 +5,7 @@
 
 	<category title="New" />
 	<item drawable="absorb" />
+	<item drawable="aeon_pay" />
 	<item drawable="ahamo" />
 	<item drawable="amni_haven" />
 	<item drawable="brightwheel" />
@@ -2582,6 +2583,7 @@
 	<item drawable="adw_launcher" />
 	<item drawable="aegis_auth" />
 	<item drawable="aena" />
+	<item drawable="aeon_pay" />
 	<item drawable="aeon_wallet" />
 	<item drawable="aep_ohio" />
 	<item drawable="aer" />

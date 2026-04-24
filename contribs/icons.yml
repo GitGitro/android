@@ -68,6 +68,28 @@ revanced_xposed: io.github.chsbuffer.revancedxposed/io.github.chsbuffer.revanced
 
 nexalloy: io.github.chsbuffer.revancedxposed/io.github.nexalloy.activity.SettingsActivityAlias
 
+jr_east: jp.co.jreast/jp.co.jreast.jreastapp.commuter.launchscreen.LaunchScreenActivity
+
+newdays: jp.j_retail/com.lv.imanara.module.basic.OpeningActivity
+
+welcia: jp.co.welcia_yakkyoku.tapps/com.locationvalue.ma2.app.SplashActivity
+
+yodobashi_gold: jp.co.welcia_yakkyoku.tapps/com.locationvalue.ma2.app.SplashActivity
+
+liquid_ekyc: asia.liquidinc.ekyc_app/asia.liquidinc.ekyc_app.MainActivity
+
+katsuya: li.yapp.appE3F5CA73/li.yapp.sdk.YLSplashActivity
+
+aeon_mall: com.aeonmall.shopping_app/com.insprout.aeonmall.xapp.StartActivity
+
+pal_closet: com.pal.shopapp/jp.palcloset.app.LauncherActivity
+
+asoview: com.asoview.app/com.asoview.app.ui.MainActivity
+
+ekitag: jp.co.jreast.ekitag/jp.co.jreast.ekitag.MainActivity
+
+goca: jp.co.watahan.app.watahangoca/jp.co.watahan.app.watahangoca.AppActivity
+
 jal: com.jalglobalwallet.jgw/com.jalglobalwallet.jgw.HandleAppLinksActivityDefault
 
 japan_airlines: jp.co.jal.dom/com.accenture.renewal.jal.app.MainActivity
