@@ -95,3 +95,7 @@ jal: com.jalglobalwallet.jgw/com.jalglobalwallet.jgw.HandleAppLinksActivityDefau
 japan_airlines: jp.co.jal.dom/com.accenture.renewal.jal.app.MainActivity
 
 google_classroom: org.chromium.webapk.a16af3005d0d1f19b_v2/org.chromium.webapk.shell_apk.h2o.H2OOpaqueMainActivity
+
+fadcam: com.fadcam/com.fadcam.SplashActivity
+
+k_nine_email: com.fsck.k9/net.thunderbird.app.common.MainActivity
