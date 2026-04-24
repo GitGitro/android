@@ -67,3 +67,9 @@ homebot: com.abast.homebot/com.abast.homebot.MainActivity
 revanced_xposed: io.github.chsbuffer.revancedxposed/io.github.chsbuffer.revancedxposed.activity.SettingsActivityAlias
 
 nexalloy: io.github.chsbuffer.revancedxposed/io.github.nexalloy.activity.SettingsActivityAlias
+
+jal: com.jalglobalwallet.jgw/com.jalglobalwallet.jgw.HandleAppLinksActivityDefault
+
+japan_airlines: jp.co.jal.dom/com.accenture.renewal.jal.app.MainActivity
+
+google_classroom: org.chromium.webapk.a16af3005d0d1f19b_v2/org.chromium.webapk.shell_apk.h2o.H2OOpaqueMainActivity
