@@ -5,3 +5,7 @@
 # examples:
 # https://github.com/Delta-Icons/android/blob/master/CONTRIBUTING.md#examples
 #
+
+lsposed_manager:
+  - pw.hexed.lsposed/pw.hexed.lsposed.MainActivity
+  - org.gilbsgilbs.lspshrt/org.gilbsgilbs.lspshrt.MainActivity
