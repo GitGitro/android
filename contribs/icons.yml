@@ -57,3 +57,5 @@ sorcery_tcg_game_assistant: com.tschepo.sorceryTCGGameAssistant/com.tschepo.sorc
 crowdsec_manager: com.crowdsec.manager.independent/com.crowdsec.manager.mobile.MainActivity
 
 obtainium: app.obtainiumplus/app.obtainiumplus.MainActivity
+
+my_rabbit: com.bss.rabbitmobileapp/net.appsynth.rabbit.rabbitApp.MainActivity
