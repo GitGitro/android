@@ -1,4 +1,4 @@
-name: build-nightly
+name: Build Nightly
 
 concurrency:
   group: delta
