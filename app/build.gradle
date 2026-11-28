@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 def versionCodeNightly = (System.getenv("VERSION_CODE") ?: "0").toInteger()
+def versionNameNightly = System.getenv("VERSION_NAME") ?: "nightly"
 
 android {
     compileSdk = rootProject.ext.CompileSdk
@@ -63,6 +64,7 @@ android {
 			resValue "string", "app_name", "Delta"
 			matchingFallbacks = ["nightly"]
 			versionCode = versionCodeNightly
+			versionName = versionNameNightly
 		}
 	}
 

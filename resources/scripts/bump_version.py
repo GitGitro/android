@@ -83,7 +83,9 @@ def bump_version():
                 
                 version_code = build_version_code(version_name)
                 if args.release == 'nightly':
-                    version_code += int(date.today().strftime('%Y%m%d'))
+                    today = date.today().strftime('%Y%m%d')
+                    version_code += int(today)
+                    version_name = version_name.replace(prerelease=f'nightly.{today}')
         
             if args.env:
                 print(f'is_beta={is_beta}')

@@ -15,28 +15,28 @@ env:
 jobs:
   build:
     name: Build
-    runs-on: android
+    runs-on: ubuntu-22.04
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v7.0.1
       with:
         fetch-depth: 0
 
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v5
+      uses: gradle/actions/setup-gradle@v5.0.2
       with:
         add-job-summary: never
 
     - name: Setup Java
-      uses: actions/setup-java@v5
+      uses: actions/setup-java@v6.3.0
       with:
         cache: gradle
         distribution: temurin
         java-version: 18
 
     - name: Setup Python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@v7.1.0
       with:
         cache: pip
         python-version: '3.13'
@@ -50,7 +50,7 @@ jobs:
         pip install -r ${{ env.sd }}/requirements.txt
 
     - name: Install Linux deps
-      uses: awalsh128/cache-apt-pkgs-action@latest
+      uses: awalsh128/cache-apt-pkgs-action@v1.6.3
       with:
         packages: optipng
         version: 1.0
@@ -88,15 +88,16 @@ jobs:
     - name: Build APK
       env:
         VERSION_CODE: ${{ env.version_code }}
+        VERSION_NAME: ${{ env.version_name }}
       run: |
-        bash gradlew assembleNightly
+        bash gradlew --build-cache assembleNightly
 
     - name: Move unsigned builds
       run: |
         find app/build/outputs -regextype posix-egrep -regex '.*-(release|unsigned).apk$' | sudo xargs -I % mv -v % .
 
     - name: Sign builds
-      uses: kevin-david/zipalign-sign-android-release@main
+      uses: kevin-david/zipalign-sign-android-release@v2.0.2
       with:
         releaseDirectory: .
         signingKeyBase64: ${{ secrets.KEYSTORE_BASE64 }}
@@ -110,12 +111,19 @@ jobs:
         mv -v app-nightly-release-unsigned-signed.apk delta-nightly-${{ env.version_code }}.apk
 
     - name: Upload signed builds to Artifacts
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v7.0.2
       with:
         name: delta-nightly-${{ env.version_code }}
         path: delta-*.apk
         if-no-files-found: error
         retention-days: 30
+
+    - name: Delete release if exist then create release
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+         gh release view "nightly" && gh release delete "nightly" -y --cleanup-tag
+         gh release create "nightly" "delta-*.apk" -p -t "Delta Nightly"
 
     - name: Upload APK to VPS
       uses: appleboy/scp-action@v1.0.0
@@ -126,4 +134,4 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         passphrase: ${{ secrets.VPS_PASSPHRASE }}
         source: delta-*.apk
-        target: ${{ secrets.VPS_PATH }}
+        target: ${{ secrets.VPS_TARGET }}
